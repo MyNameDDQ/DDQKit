@@ -74,10 +74,10 @@
 - (NSArray *)ddq_filterObjectWithPredicate:(NSPredicate *)pre {
     
     if (!pre) {
-        return @[];
+        return self;
     }
     
-    NSArray *array = nil;
+    NSArray *array = @[];
     @try {
         
         array = [self filteredArrayUsingPredicate:pre];
@@ -179,7 +179,7 @@
 
 - (NSUInteger)ddq_insertObject:(id)object atIndex:(NSUInteger)index {
     
-    if (object && ![self ddq_arrayBeyondWithIndex:index]) {
+    if (object) {
         
         [self insertObject:object atIndex:index];
         

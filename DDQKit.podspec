@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "DDQKit"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.ios.deployment_target = '8.0'
   s.summary      = "工具类集合"
   s.homepage     = "https://github.com/MyNameDDQ/DDQKit"
