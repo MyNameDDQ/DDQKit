@@ -84,9 +84,7 @@
 - (void)ddq_setObject:(id)object forKey:(NSString *)key {
     
     if (object) {
-        
         [self setObject:object forKey:key];
-        
     }
 }
 

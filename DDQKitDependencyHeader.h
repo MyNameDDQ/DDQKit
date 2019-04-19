@@ -31,9 +31,6 @@
 
 #import <Masonry/Masonry.h>
 
-#import <DDQUIKit/DDQUIKitHeader.h>
-#import <DDQAutoLayout/DDQAutoLayout.h>
-
 #import <MBProgressHUD/MBProgressHUD.h>
 
 #endif /* DDQKitDependencyHeader_h */

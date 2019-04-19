@@ -20,5 +20,6 @@ Pod::Spec.new do |s|
   s.dependency 'MBProgressHUD'
   s.dependency 'FMDB'
   s.dependency 'WebViewJavascriptBridge'
+  s.dependency 'SAMKeychain'
 
 end
