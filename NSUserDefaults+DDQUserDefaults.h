@@ -22,7 +22,7 @@ NS_AVAILABLE_IOS(1_0_1)
  @param key 字段
  @param changed 变化后的回调
  */
-+ (void)ddq_userDefaultObserverWithKey:(NSString *)key changed:(DDQUserDefaultValuesChangedBlock)changed;
++ (id<NSObject>)ddq_userDefaultObserverWithKey:(NSString *)key changed:(DDQUserDefaultValuesChangedBlock)changed;
 
 @end
 

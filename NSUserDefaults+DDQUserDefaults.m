@@ -15,20 +15,15 @@
 DDQUserDefaultChangeKey const DDQUserDefaultOldValueKey = @"DDQOldValueKey";
 DDQUserDefaultChangeKey const DDQUserDefaultNewValueKey = @"DDQNewValueKey";
 
-static id observer = nil;
-+ (void)ddq_userDefaultObserverWithKey:(NSString *)key changed:(DDQUserDefaultValuesChangedBlock)changed {
++ (id<NSObject>)ddq_userDefaultObserverWithKey:(NSString *)key changed:(DDQUserDefaultValuesChangedBlock)changed {
     
     if (key.length == 0) {
-        return;
+        return nil;
     }
     
     NSUserDefaults *defaults = [self standardUserDefaults];
     __block id oldValues = [defaults objectForKey:key];
-    
-    if (observer) {
-        return;
-    }
-    
+    id observer = nil;
     observer = [[NSNotificationCenter defaultCenter] addObserverForName:NSUserDefaultsDidChangeNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
         
         if (changed) {
@@ -45,19 +40,10 @@ static id observer = nil;
             
             changed(dic);
             
-        }
-        [self ddq_removeUserDefaultObserver];
-        
+        }        
     }];
-}
-
-+ (void)ddq_removeUserDefaultObserver {
+    return observer;
     
-    if (observer) {
-        
-        [[NSNotificationCenter defaultCenter] removeObserver:observer];
-        
-    }
 }
 
 @end
