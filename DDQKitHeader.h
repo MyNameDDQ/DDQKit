@@ -25,5 +25,6 @@
 
 #import <DDQUIKit/DDQUIKitHeader.h>
 #import <DDQAutoLayout/DDQAutoLayout.h>
+#import <DDQAutoLayout/UIView+DDQViewLayoutMaker.h>
 
 #endif /* DDQKitHeader_h */
