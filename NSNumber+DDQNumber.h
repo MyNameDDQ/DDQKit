@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSNumber (DDQNumber)
 
++ (void)ddq_scaleNumberForPad:(BOOL)pad;
+
 @property (nonatomic, readonly) CGFloat scaleValue;
 
 @end
